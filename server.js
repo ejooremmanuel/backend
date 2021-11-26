@@ -52,7 +52,7 @@ app.use("/oauth/", oauthRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/mail", mailRouter);
 app.use("/api/videos", authenticatedOnly, verrifyGoogleTokens, videosRouter);
-app.use("/api/user", authenticatedOnly, verrifyGoogleTokens, userRouter);
+app.use("/api/user", verrifyGoogleTokens, userRouter);
 app.use("/api/connections", authenticatedOnly, connectionsRouter);
 app.use("/api/follows", authenticatedOnly, followsRouter);
 

@@ -1,12 +1,17 @@
-const express = require('express')
-const expressformidable = require('express-formidable-v2')
+const express = require("express");
+const expressformidable = require("express-formidable-v2");
 
-const controllers = require('../controllers/user.controllers')
+const controllers = require("../controllers/user.controllers");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/profile', controllers.getUserProfile)
-router.put('/profile', controllers.updateProfile)
-router.post('/upload-avatar', expressformidable(), controllers.uploadProfileImage)
+router.get("/profile", controllers.getUserProfile);
+router.put("/profile", controllers.updateProfile);
+router.post("/profile", controllers.updateProfile);
+router.post(
+  "/upload-avatar",
+  expressformidable(),
+  controllers.uploadProfileImage
+);
 
-module.exports = router
+module.exports = router;

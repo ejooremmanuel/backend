@@ -209,6 +209,8 @@ const resetPass = async (req, res) => {
   }
 };
 
+const updateUser = async () => {};
+
 module.exports = {
   signup,
   login,
