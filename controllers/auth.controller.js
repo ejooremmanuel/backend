@@ -128,6 +128,7 @@ const login = async (request, response) => {
     refreshToken: refreshToken.token,
     expiresIn: 15 * 60,
     ok: true,
+    user: { ...account, password: "" },
   });
 };
 
